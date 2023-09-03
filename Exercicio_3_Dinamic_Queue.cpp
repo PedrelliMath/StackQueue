@@ -51,7 +51,7 @@ void getNewPassword(struct Queue*& head, int& password) {
         current->next = newPassword;
     }
 
-    cout << password - 1 << " adicionado a fila de senhas!\n" << endl;
+    cout << setw(4) << setfill('0') << password - 1 << " adicionado a fila de senhas!\n" << endl;
 }
 
 void callPassword(struct Queue*& head){
@@ -67,7 +67,7 @@ void callPassword(struct Queue*& head){
     if(head->priority){
 
         cout << "Encontrado senha com prioridade...\n"
-        << "A senha: " << head->password << " foi chamada\n" << endl;
+        << "A senha: " << setw(4) << setfill('0') << head->password << " foi chamada\n" << endl;
 
         struct Queue* temp = head;
         head = head->next;
@@ -96,14 +96,14 @@ void callPassword(struct Queue*& head){
             }
 
             cout << "Encontrado senha com prioridade...\n"
-            << "A senha: " << current->password << " foi chamada\n" << endl;
+            << "A senha: " << setw(4) << setfill('0') << current->password << " foi chamada\n" << endl;
 
             free(current);
 
         }else {
 
             cout << "Nao foi encontrado senha com prioridade...\n"
-            << "A senha: " << head->password << " foi chamada\n" << endl;
+            << "A senha: " << setw(4) << setfill('0') << head->password << " foi chamada\n" << endl;
 
             struct Queue* temp = head;
             head = head->next;
