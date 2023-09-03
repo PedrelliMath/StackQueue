@@ -162,14 +162,13 @@ void deleteQueue(struct Queue*& head, int& password){
             free(temp);
         }
 
+        password = 1;
         cout << "As senhas foram excluidas da fila!\n" << endl;
 
     }else{
 
         cout << "Nao foi encontrado nenhuma senha na fila...\n" << endl;
     }
-
-    password = 1;
 }
 
 
