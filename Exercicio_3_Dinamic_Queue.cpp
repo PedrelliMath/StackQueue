@@ -121,9 +121,9 @@ void printDetails(struct Queue *head){
         struct Queue *current = head;
 
         while(current != nullptr){
-            
-            cout << "Senha: " << setw(4) << setfill('0') << current->password << " Prioridade: "
-            << (current->priority ? "Sim" : "Nao") << endl;
+
+            cout << "Senha: " << setw(4) << setfill('0') << current->password 
+            << " Prioridade: " << (current->priority ? "Sim" : "Nao") << endl;
 
             current = current->next;
         }
